@@ -14,3 +14,15 @@ target_link_libraries(foo
         )
 
 add_test(test_all foo)
+
+
+add_executable(foo_environment  foo_environment.cpp foo.cpp)
+
+target_link_libraries(foo_environment
+        GTest::GTest
+        GTest::Main
+        GMock::GMock
+        GMock::Main
+        )
+
+add_test(test_all foo_environment)

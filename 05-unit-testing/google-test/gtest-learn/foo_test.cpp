@@ -19,3 +19,17 @@ TEST_F(fooTest, throw) {
 
     EXPECT_ANY_THROW(foo.foo(10, 0));
 }
+
+TEST_F(fooTest, Predicate_Assertions) {
+    Foo foo;
+
+    int m = 5;
+    int n = 6;
+//    EXPECT_PRED2(foo.foo(m, n), m, n);
+}
+
+TEST_F(fooTest, Demo)
+{
+    FooType<bool> fooType;
+    fooType.Bar();
+}
