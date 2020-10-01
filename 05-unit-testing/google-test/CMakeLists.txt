@@ -18,6 +18,7 @@ add_subdirectory(3rd_party/google-test)
 # enable CTest testing
 enable_testing()
 
+
 # Add a testing executable
 add_executable(unit_tests unit_tests.cpp)
 
@@ -30,3 +31,6 @@ target_link_libraries(unit_tests
         )
 
 add_test(test_all unit_tests)
+
+add_subdirectory(gmock-learn)
+add_subdirectory(gtest-learn)
