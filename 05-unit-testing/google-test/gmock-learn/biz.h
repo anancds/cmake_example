@@ -24,6 +24,7 @@ public:
             if (!_user->Login(username, password)) {
                 // 登录失败
                 ret += "login error.";
+                std::cout << ret << std::endl;
                 return ret;
             } else {
                 // 登录成功
@@ -35,11 +36,12 @@ public:
         }
 
         if (!_user->Pay(money)) {
-            ret += "pay error.";
+            ret += " pay error.";
         } else {
-            ret += "pay success.";
+            ret += " pay success.";
         }
 
+        std::cout << ret << std::endl;
         return ret;
     }
 
