@@ -6,11 +6,21 @@
 
 
 class fooTest : public ::testing::Test {
+    void SetUp() override
+    {
+        std::cout << "Foo FooEnvironment SetUP" << std::endl;
+    }
+
+    void TearDown() override
+    {
+        std::cout << "Foo FooEnvironment TearDown" << std::endl;
+    }
 };
 
 TEST_F(fooTest, abc) {
     Foo foo;
 
+    std::cout << "test" << std::endl;
     EXPECT_EQ(1 , foo.foo(1, 2)) << "failed.";
 }
 
@@ -31,5 +41,5 @@ TEST_F(fooTest, Predicate_Assertions) {
 TEST_F(fooTest, Demo)
 {
     FooType<bool> fooType;
-    fooType.Bar();
+//    fooType.Bar();
 }
