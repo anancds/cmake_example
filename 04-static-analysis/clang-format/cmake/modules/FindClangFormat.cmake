@@ -26,8 +26,9 @@ FIND_PACKAGE_HANDLE_STANDARD_ARGS(
 mark_as_advanced(
         CLANG_FORMAT_BIN)
 
-if (CLANG_FORMAT_FOUND)
+if (ClangFormat_FOUND)
     # A CMake script to find all source files and setup clang-format targets for them
+    message("clang-format found.")
     include(clang-format)
 else ()
     message("clang-format not found. Not setting up format targets")

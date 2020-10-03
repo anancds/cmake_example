@@ -12,4 +12,4 @@ add_subdirectory(subproject2)
 
 set(CLANG_FORMAT_BIN_NAME clang-format)
 set(CLANG_FORMAT_EXCLUDE_PATTERNS  "build/" ${CMAKE_BINARY_DIR})
-find_package(ClangFormat)
+find_package(ClangFormat REQUIRED)

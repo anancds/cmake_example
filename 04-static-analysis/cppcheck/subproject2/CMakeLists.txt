@@ -1,5 +1,5 @@
 # Set the project name
-project (cpp-check-subproject)
+project (cpp-check-subproject2)
 
 # Create a sources variable with a link to all cpp files to compile
 set(SOURCES
